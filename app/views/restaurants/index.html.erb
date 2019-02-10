@@ -1,0 +1,17 @@
+<h1>List of Amazing Tel-Aviv Places</h1>
+
+<form method="get" action="/restaurants" >
+
+  <input type="text" name="food_type" placeholder="What kind of food?">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @restaurants.each do |id, restaurant| %>
+    <li>
+      <%= restaurant[:name]%> - <%= restaurant[:category]%> -
+      <%= link_to 'details', restaurant_path(id) %>
+      <% #link_to string, prefix_path() %>
+    </li>
+  <% end %>
+</ul>

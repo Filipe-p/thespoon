@@ -4,12 +4,18 @@
     <title>Thespoon</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+
     <%= yield %>
+
+    <% time = Time.now %>
+    <div>
+      made with love @ Tel-Aviv <%= time %>
+    </div>
   </body>
 </html>
